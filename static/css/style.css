@@ -342,7 +342,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .single #fh5co-aside {
   position: relative;
-  height: 700px;
+  height: 400px;
   width: 100%;
 }
 #fh5co-aside a {
@@ -397,6 +397,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-aside .page-title img {
   margin-bottom: 30px;
   width: 80px;
+  height: 80px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -439,6 +440,9 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 footer {
+  position:fixed;
+  bottom: 0px;
+  width: 100%;
   background: #fafafa;
   clear: both;
   font-size: 12px;
@@ -544,6 +548,9 @@ footer {
   }
 }
 .fh5co-post .fh5co-entry > div p:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin-bottom: 0;
 }
 
