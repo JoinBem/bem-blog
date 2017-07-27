@@ -19,7 +19,6 @@ import '../assets/simplemde.css'
 import marked from 'marked';
 import highlight from 'highlight.js'
 import '../assets/atom-one-light.css'
-import { Message } from 'element-ui';
 export default {
 	data () {
         return {

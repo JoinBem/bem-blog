@@ -130,7 +130,7 @@ router.post('/api/login', (req, res) => {
     })
 });
 
-//
+//admin文章列表
 router.get('/api/admin/articleList', (req, res) => {
     var session = req.session;
     var user = session.user;
@@ -144,7 +144,7 @@ router.get('/api/admin/articleList', (req, res) => {
     })
 });
 
-//
+//admin保存文章
 router.post('/api/admin/saveArticle', (req, res) => {
     var session = req.session;
     var user = session.user;
@@ -159,7 +159,7 @@ router.post('/api/admin/saveArticle', (req, res) => {
     })
 });
 
-//
+//admin文章详情查询
 router.get('/api/admin/articleDetails/:id', (req, res) => {
     var sql = $sql.admin.selectArticle;
     conn.query(sql, [req.params.id], function(err, result){
@@ -171,6 +171,7 @@ router.get('/api/admin/articleDetails/:id', (req, res) => {
     })
 });
 
+//admin文章详情编辑
 router.post('/api/admin/articleDetails', (req, res) => {
     var sql = $sql.admin.selectArticle;
     conn.query(sql, [req.body.id], function(err, result){
@@ -182,6 +183,7 @@ router.post('/api/admin/articleDetails', (req, res) => {
     })
 });
 
+//admin文章删除
 router.post('/api/admin/del', (req, res) => {
     var sql = $sql.admin.delArticle;
     conn.query(sql, [req.body.id], function(err, result){
@@ -193,6 +195,7 @@ router.post('/api/admin/del', (req, res) => {
     })
 });
 
+//admin文章修改
 router.post('/api/admin/updateArticle', (req, res) => {
     var sql = $sql.admin.updateArticle;
     var msg = req.body.obj;
@@ -205,6 +208,7 @@ router.post('/api/admin/updateArticle', (req, res) => {
     })
 });
 
+//admin查询用户信息
 router.post('/api/admin/selectUserMsg', (req, res) => {
     var session = req.session;
     var user = session.user;
@@ -219,6 +223,7 @@ router.post('/api/admin/selectUserMsg', (req, res) => {
     })
 });
 
+//admin保存用户信息
 router.post('/api/admin/savePerMsg', (req, res) => {
     var session = req.session;
     var user = session.user;
